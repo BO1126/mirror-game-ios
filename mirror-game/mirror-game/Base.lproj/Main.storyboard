@@ -17,9 +17,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dNq-7e-3nA" appends="YES" id="7Jv-pJ-4Tg"/>
+                            <outletCollection property="gestureRecognizers" destination="piN-OB-iaN" appends="YES" id="4HD-B0-TXn"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="longPressGestureRecognizer" destination="dNq-7e-3nA" id="RzG-B1-3Za"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="dNq-7e-3nA">
+                    <connections>
+                        <action selector="longPressView" destination="BYZ-38-t0r" id="jje-rA-zO9"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer numberOfTouchesRequired="2" id="piN-OB-iaN">
+                    <connections>
+                        <action selector="tapTwoFingersView" destination="BYZ-38-t0r" id="GzU-Dx-wOn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
         </scene>
