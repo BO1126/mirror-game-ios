@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         mirrorView.frame = CGRect(x: Int(self.view.frame.maxX-200), y: 270, width: 30, height: 30)
         mirrorView.backgroundColor = UIColor.red
         self.view.addSubview(mirrorView)
-        longPressGestureRecognizer.minimumPressDuration = 0.1
+        longPressGestureRecognizer.minimumPressDuration = 0.01
     }
     
     @IBAction func longPressView(){
